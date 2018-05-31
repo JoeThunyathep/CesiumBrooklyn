@@ -2,7 +2,7 @@
     var jsonfile = require('jsonfile');
     var request = require('request');
     // const SENSOR_API_BASE_URL = 'http://localhost:8080/SensorThingsService/v1.0';
-    const SENSOR_API_BASE_URL = 'http://localhost:8080/STA_Test_Rossani/v1.0';  
+    const SENSOR_API_BASE_URL = 'http://localhost:8080/STA_Brooklyn/v1.0';  
     // =========================== Input setup ===========================
     //URL Path    
     const SENSOR_API_FINAL_URL = '/FeaturesOfInterest';

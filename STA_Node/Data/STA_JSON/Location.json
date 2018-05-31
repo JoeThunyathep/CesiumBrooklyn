@@ -1,0 +1,10 @@
+{
+    "name": "Brooklyn",
+    "description": "NY",
+    "encodingType": "application/vnd.geo+json",
+    "location": {
+      "type": "Point",
+      "coordinates": [-73.988107,40.693563 ]
+    }
+  }
+  

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8">
+    <!-- Tell IE to use the latest, best version (or Chrome Frame if pre-IE11). -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/ico" href="../../theme/img/apple-icon.ico" sizes="16x16">
+    <title>New York Heat Demand Simulation (By Joe)</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <link href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href="../ThirdParty/jquery-timepicker-1.3.5/jquery.timepicker.min.css" rel="stylesheet" type='text/css'>
+    <script src="../ThirdParty/Cesium145/Cesium.js"></script>
+    <script src="../ThirdParty/Intersection/IntersectionAPI.js"></script>
+    <script src="../ThirdParty/code/highcharts.js"></script>
+    <script src="../ThirdParty/code/modules/series-label.js"></script>
+    <script src="../ThirdParty/code/modules/exporting.js"></script>
+    <script src="../ThirdParty/code/js/themes/dark-unica.js"></script>
+    <script src="../ThirdParty/jstat.min.js"></script>
+
+    <style>
+        @import url(../../ThirdParty/Cesium145/Widgets/widgets.css);
+    </style>
+    <link rel="stylesheet" href="index.css" media="screen">
+</head>
+
+<body>
+    <div id="cesiumContainer"></div>
+    <div class="backdrop" id="menu">
+        <h1>
+            <span style="color:azure">NYC Summer School/</span>
+            <span style="color:crimson"> Joe</span>
+        </h1>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////Session for 3D Map Pin Menu//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////// -->
+        <h3 onclick="openMapP()" style="cursor:pointer; color:rgb(138, 154, 226)">Select the Area</h3>
+        <div id="MapP" style="display:none">
+            <strong>Red Hook</strong>
+            <br>
+            <button class="myButtonBlue" type="button" onclick="ShowMapPinPublic()">Show</button>
+            <button class="myButtonRed" type="button" onclick="HideMapPinPublic()">Hide</button>
+            <br>
+        </div>
+        <!-- //////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////Session for 3D City Model Menu//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////// -->
+        <h3 onclick="open3DCMO()" style="cursor:pointer">3D City Model</h3>
+        <div id="DCMO" style="display:none">
+            <strong>CensusLayer</strong>
+            <button class="myButtonGreen" type="button" onclick="addCensus()">On</button>
+            <button class="myButtonRed" type="button" onclick="TurnOffCensus()">Off</button>
+            <br>
+            <br>
+            <strong>3D Layer</strong>
+            <button class="myButtonGreen" type="button" onclick="addLayers3DT()">On</button>
+            <button class="myButtonRed" type="button" onclick="TurnOff3DT()">Off</button>
+            <br>
+            <br>
+            <div class="nowrap" id="CesiumStyleChoice" style="display:none">
+                <select id="tileStyle">
+                    <option value="none"> Color Style : White </option>
+                    <option value="black"> Color Style : Dark </option>
+                    <option value="white"> Color Style : Gray </option>
+                </select>
+            </div>
+        </div>
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////Session for Calling Graph ///////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////// -->
+        <h3 onclick="openStat()" style="cursor:pointer; color:rgb(228, 139, 139)">Historical Statistic Data</h3>
+        <div id="CamMe" style="display:none">
+        </div>
+        <button class="myButtonBlue" id="showChart">Show Chart</button>
+        <button class="myButtonRed" type="button" onclick="RemoveStat()">Close</button>
+        <br>
+        <button class="myButtonBlue" id="showValue">Show Statistic Values</button>
+        <button class="myButtonRed" type="button" onclick="RemoveStatValue()">Close</button>
+    </div>
+
+
+    </div>
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////Session for Stat Result ///////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div style="display:none; resize:both" class="backdrop" id="StatInfo">
+        <h2>Statistic of the selected parameters</h2>
+        <strong>&#9824
+            <span style="color: rgb(221, 230, 193)" id="sd1nametag"></span>
+        </strong>
+        <br>
+        <span style="color: rgb(168, 230, 111)">
+            <strong>Standard Deviation :</strong>
+        </span>
+        <span id="SD1val"></span>
+        <span style="color: rgb(168, 230, 111)">
+            <strong>Maximum :</strong>
+        </span>
+        <span id="max1val"></span>
+        <span style="color: rgb(168, 230, 111)">
+            <strong>Minimum :</strong>
+        </span>
+        <span id="min1val"></span>
+        <br>
+        <strong>&#9824
+            <span style="color: rgb(221, 230, 193)" id="sd2nametag"></span>
+        </strong>
+        <br>
+        <span style="color: rgb(168, 230, 111)">
+            <strong>Standard Deviation :</strong>
+        </span>
+        <span id="SD2val"></span>
+        <span style="color: rgb(168, 230, 111)">
+            <strong>Maximum :</strong>
+        </span>
+        <span id="max2val"></span>
+        <span style="color: rgb(168, 230, 111)">
+            <strong>Minimum :</strong>
+        </span>
+        <span id="min2val"></span>
+        <br>
+        <!-- <strong>&#9824 Co-Parameters </strong> -->
+        <strong>&#9824
+            <span style="color: rgb(221, 230, 193)" id="sd11nametag"></span> &
+            <span style="color: rgb(221, 230, 193)" id="sd22nametag"></span>
+        </strong>
+        <br>
+        <span style="color: rgb(168, 230, 111)">
+            <strong>Covariance :</strong>
+        </span>
+        <span id="COV"></span>
+        <span style="color: rgb(168, 230, 111)">
+            <strong>Correlation (Pearson's Rho):</strong>
+        </span>
+        <span id="CORR"></span>
+        <span style="color: rgb(168, 230, 111)">
+            <strong>Correlation (Spearman's Rho):</strong>
+        </span>
+        <span id="CORRs"></span>
+
+
+    </div>
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////Session for Chart ///////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div style="display:none; resize:both" class="backdrop" id="HightChartContainer" draggable="true">
+        Chart Area
+    </div>
+
+
+
+    <script src="icitymainapp.js"></script>
+    <script src="DrawStat.js"></script>
+    <script src="getSTA.js"></script>
+    <script src="DateApp.js"></script>
+    <script src="DrawChart.js"></script>
+    <script src="TopMenuManagement.js"></script>
+    <script src="MainMapPin.js"></script>
+    <script src="../ThirdParty/jquery-timepicker-1.3.5/jquery.timepicker.min.js"></script>
+</body>
+
+</html>

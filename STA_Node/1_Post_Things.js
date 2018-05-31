@@ -3,10 +3,10 @@ var jsonfile = require('jsonfile');
 var request = require('request');
 // =========================== Input setup ===========================
 //URL Path
-const SENSOR_API_BASE_URL = 'http://localhost:8080/STA_Test_Rossani/v1.0';    
+const SENSOR_API_BASE_URL = 'http://localhost:8080/STA_Brooklyn/v1.0';    
 const SENSOR_API_FINAL_URL = '/Things';
 //File Path
-var file = 'Data/STA_initialData_HFT_Sensor/Things_n.json'; //Local input file ("_n" means the latest updated things)
+var file = 'Data/STA_initialData_HFT_Sensor/Things.json'; //Local input file ("_n" means the latest updated things)
 // ===================================================================
 var object;
 function Post_Sensor() {

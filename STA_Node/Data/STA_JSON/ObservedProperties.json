@@ -1,6 +1,6 @@
 [
     {
-  "name": "Aussentemp",
+  "name": "HeatDemand",
   "description": "Outside Temperature",
   "definition": "https://en.wikipedia.org/wiki/List_of_temperature_sensors"
 }

@@ -4,13 +4,13 @@
     
     // =========================== Input setup ===========================
     const SENSOR_API_FINAL_URL = '/Datastreams';
-    const SENSOR_API_BASE_URL = 'http://localhost:8080/STA_Test_Rossani/v1.0';
+    const SENSOR_API_BASE_URL = 'http://localhost:8080/STA_Brooklyn/v1.0';
 
     // Set variable depend on the object in SensorThings Service
     var IdObsProp_First = 1; // min 1
-    var IdObsProp_Last  = 1; // max 1
-    var IdThings_First  = 2;  // min 1
-    var IdThings_Last   = 4;  // max 4
+    var IdObsProp_Last  = 2; // max 2
+    var IdThings_First  = 1;  // min 1
+    var IdThings_Last   = 1;  // max 1
     // ============================ Define Variable =========================
     var datastreamBody = []; 
     var DS_Name;    var DS_Description; var DS_obType;
@@ -25,6 +25,15 @@
             for (let st_id = IdThings_First; st_id <= IdThings_Last; st_id++) {
                 // match the IoT id of <Things and Sensors>
                 if (o_id == 1) { 
+                    CoreDS_Name     = "Temperature"
+                    DS_Name         = `Test Data Rossany : ${CoreDS_Name}`,
+                    DS_Description  = `Datastream for recording ${CoreDS_Name} from Aula`,
+                    DS_obType       = "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    UoM_Name        = "Celcius",
+                    UoM_Definition  = "https://en.wikipedia.org/wiki/Celcius",
+                    UoM_Symbol      = "C"    
+                }
+                if (o_id == 2) { 
                     CoreDS_Name     = "Temperature"
                     DS_Name         = `Test Data Rossany : ${CoreDS_Name}`,
                     DS_Description  = `Datastream for recording ${CoreDS_Name} from Aula`,
