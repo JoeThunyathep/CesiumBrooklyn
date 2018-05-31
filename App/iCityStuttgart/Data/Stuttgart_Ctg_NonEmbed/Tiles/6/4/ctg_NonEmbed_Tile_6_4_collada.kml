@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>ctg_NonEmbed_Tile_6_4_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark id="COLLADA_DEBW522AA00022e7a">
+      <kml:name>DEBW522AA00022e7a</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1779174</kml:longitude>
+          <kml:latitude>48.7819591</kml:latitude>
+          <kml:altitude>4.729999994879108E-5</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1425028</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>26673/DEBW522AA00022e7a.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_DEBW522AA00030f06">
+      <kml:name>DEBW522AA00030f06</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1776722</kml:longitude>
+          <kml:latitude>48.7814645</kml:latitude>
+          <kml:altitude>0.0010149999999953252</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1392735</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>822/DEBW522AA00030f06.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_GCO_522_00002e22">
+      <kml:name>GCO_522_00002e22</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1773851</kml:longitude>
+          <kml:latitude>48.7817368</kml:latitude>
+          <kml:altitude>7.400000015422847E-6</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1254937</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>29511/GCO_522_00002e22.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Style id="GenericPointNormal">
+      <kml:LineStyle>
+        <kml:color>C866FFFF</kml:color>
+        <kml:width>3.0</kml:width>
+      </kml:LineStyle>
+      <kml:BalloonStyle>
+        <kml:text>$[description]</kml:text>
+      </kml:BalloonStyle>
+    </kml:Style>
+    <kml:Style id="GenericPointHighlight">
+      <kml:LineStyle>
+        <kml:color>C8FFFFFF</kml:color>
+        <kml:width>6.0</kml:width>
+      </kml:LineStyle>
+      <kml:BalloonStyle>
+        <kml:text>$[description]</kml:text>
+      </kml:BalloonStyle>
+    </kml:Style>
+    <kml:StyleMap id="GenericPointStyle">
+      <kml:Pair>
+        <kml:key>normal</kml:key>
+        <kml:styleUrl>#GenericPointNormal</kml:styleUrl>
+      </kml:Pair>
+      <kml:Pair>
+        <kml:key>highlight</kml:key>
+        <kml:styleUrl>#GenericPointHighlight</kml:styleUrl>
+      </kml:Pair>
+    </kml:StyleMap>
+    <kml:Style id="GenericCurveNormal">
+      <kml:LineStyle>
+        <kml:color>C866FFFF</kml:color>
+        <kml:width>3.0</kml:width>
+      </kml:LineStyle>
+      <kml:BalloonStyle>
+        <kml:text>$[description]</kml:text>
+      </kml:BalloonStyle>
+    </kml:Style>
+    <kml:Style id="GenericCurveHighlight">
+      <kml:LineStyle>
+        <kml:color>C8FFFFFF</kml:color>
+        <kml:width>6.0</kml:width>
+      </kml:LineStyle>
+      <kml:BalloonStyle>
+        <kml:text>$[description]</kml:text>
+      </kml:BalloonStyle>
+    </kml:Style>
+    <kml:StyleMap id="GenericCurveStyle">
+      <kml:Pair>
+        <kml:key>normal</kml:key>
+        <kml:styleUrl>#GenericCurveNormal</kml:styleUrl>
+      </kml:Pair>
+      <kml:Pair>
+        <kml:key>highlight</kml:key>
+        <kml:styleUrl>#GenericCurveHighlight</kml:styleUrl>
+      </kml:Pair>
+    </kml:StyleMap>
+  </kml:Document>
+</kml:kml>

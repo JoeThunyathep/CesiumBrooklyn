@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>ctg_NonEmbed_Tile_3_6_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark id="COLLADA_GCO_522_00002b93">
+      <kml:name>GCO_522_00002b93</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1798802</kml:longitude>
+          <kml:latitude>48.7785162</kml:latitude>
+          <kml:altitude>1.9900000000916407E-4</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1294207</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>29534/GCO_522_00002b93.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Style id="GenericPointNormal">
+      <kml:LineStyle>
+        <kml:color>C866FFFF</kml:color>
+        <kml:width>3.0</kml:width>
+      </kml:LineStyle>
+      <kml:BalloonStyle>
+        <kml:text>$[description]</kml:text>
+      </kml:BalloonStyle>
+    </kml:Style>
+    <kml:Style id="GenericPointHighlight">
+      <kml:LineStyle>
+        <kml:color>C8FFFFFF</kml:color>
+        <kml:width>6.0</kml:width>
+      </kml:LineStyle>
+      <kml:BalloonStyle>
+        <kml:text>$[description]</kml:text>
+      </kml:BalloonStyle>
+    </kml:Style>
+    <kml:StyleMap id="GenericPointStyle">
+      <kml:Pair>
+        <kml:key>normal</kml:key>
+        <kml:styleUrl>#GenericPointNormal</kml:styleUrl>
+      </kml:Pair>
+      <kml:Pair>
+        <kml:key>highlight</kml:key>
+        <kml:styleUrl>#GenericPointHighlight</kml:styleUrl>
+      </kml:Pair>
+    </kml:StyleMap>
+    <kml:Style id="GenericCurveNormal">
+      <kml:LineStyle>
+        <kml:color>C866FFFF</kml:color>
+        <kml:width>3.0</kml:width>
+      </kml:LineStyle>
+      <kml:BalloonStyle>
+        <kml:text>$[description]</kml:text>
+      </kml:BalloonStyle>
+    </kml:Style>
+    <kml:Style id="GenericCurveHighlight">
+      <kml:LineStyle>
+        <kml:color>C8FFFFFF</kml:color>
+        <kml:width>6.0</kml:width>
+      </kml:LineStyle>
+      <kml:BalloonStyle>
+        <kml:text>$[description]</kml:text>
+      </kml:BalloonStyle>
+    </kml:Style>
+    <kml:StyleMap id="GenericCurveStyle">
+      <kml:Pair>
+        <kml:key>normal</kml:key>
+        <kml:styleUrl>#GenericCurveNormal</kml:styleUrl>
+      </kml:Pair>
+      <kml:Pair>
+        <kml:key>highlight</kml:key>
+        <kml:styleUrl>#GenericCurveHighlight</kml:styleUrl>
+      </kml:Pair>
+    </kml:StyleMap>
+  </kml:Document>
+</kml:kml>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>ctg_NonEmbed_Tile_5_2_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark id="COLLADA_DEBW522AA0004642e">
+      <kml:name>DEBW522AA0004642e</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1745819</kml:longitude>
+          <kml:latitude>48.7801491</kml:latitude>
+          <kml:altitude>9.969999996428669E-5</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1248766</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>10199/DEBW522AA0004642e.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>

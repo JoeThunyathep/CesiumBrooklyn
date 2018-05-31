@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>ctg_NonEmbed_Tile_5_6_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark id="COLLADA_DEBW522AA00020ed0">
+      <kml:name>DEBW522AA00020ed0</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1804323</kml:longitude>
+          <kml:latitude>48.7808423</kml:latitude>
+          <kml:altitude>6.819999998697313E-5</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1359</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>4000/DEBW522AA00020ed0.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_DEBW522AA0000bc60">
+      <kml:name>DEBW522AA0000bc60</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.179529</kml:longitude>
+          <kml:latitude>48.7807085</kml:latitude>
+          <kml:altitude>6.600000000389628E-5</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1339942</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>607/DEBW522AA0000bc60.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>

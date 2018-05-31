@@ -1,0 +1,16 @@
+{
+	"version": "1.0.0",
+	"layername": "ctg_NonEmbed",
+	"fileextension": ".kml",
+	"displayform": "collada",
+	"minLodPixels": 0,
+	"maxLodPixels": -1,
+	"colnum": 8,
+	"rownum": 7,
+	"bbox":{ 
+		"xmin": 9.170164529016153,
+		"xmax": 9.182722935054999,
+		"ymin": 48.774639923617435,
+		"ymax": 48.78237457774618
+	}
+}

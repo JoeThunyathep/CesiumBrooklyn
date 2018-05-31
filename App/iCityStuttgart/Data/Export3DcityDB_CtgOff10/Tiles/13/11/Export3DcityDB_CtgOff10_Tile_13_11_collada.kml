@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>Export3DcityDB_CtgOff10_Tile_13_11_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark id="COLLADA_DEBW522AA0001f58c">
+      <kml:name>DEBW522AA0001f58c</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1759376</kml:longitude>
+          <kml:latitude>48.7806242</kml:latitude>
+          <kml:altitude>306.4122671</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1329878</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>6263/DEBW522AA0001f58c.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_DEBW522AA00029db1">
+      <kml:name>DEBW522AA00029db1</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1767956</kml:longitude>
+          <kml:latitude>48.7811224</kml:latitude>
+          <kml:altitude>306.0510712</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.126938</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>2115/DEBW522AA00029db1.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_DEBW522AA0002a90f">
+      <kml:name>DEBW522AA0002a90f</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1747257</kml:longitude>
+          <kml:latitude>48.7803665</kml:latitude>
+          <kml:altitude>309.3731038</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.132652</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>17536/DEBW522AA0002a90f.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_DEBW522AA0003b944">
+      <kml:name>DEBW522AA0003b944</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1759704</kml:longitude>
+          <kml:latitude>48.780557</kml:latitude>
+          <kml:altitude>306.4723899</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1269723</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>26938/DEBW522AA0003b944.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>

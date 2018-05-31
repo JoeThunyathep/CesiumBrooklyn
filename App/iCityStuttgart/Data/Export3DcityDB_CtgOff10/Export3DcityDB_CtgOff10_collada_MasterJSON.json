@@ -1,0 +1,16 @@
+{
+	"version": "1.0.0",
+	"layername": "Export3DcityDB_CtgOff10",
+	"fileextension": ".kml",
+	"displayform": "collada",
+	"minLodPixels": 0,
+	"maxLodPixels": -1,
+	"colnum": 24,
+	"rownum": 23,
+	"bbox":{ 
+		"xmin": 9.156531335969767,
+		"xmax": 9.196365311334993,
+		"ymin": 48.76562516738067,
+		"ymax": 48.791386247116925
+	}
+}

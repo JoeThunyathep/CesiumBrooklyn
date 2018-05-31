@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>ctg_NonEmbed_Tile_3_3_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark id="COLLADA_DEBW522AA00024ac9">
+      <kml:name>DEBW522AA00024ac9</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1760893</kml:longitude>
+          <kml:latitude>48.7783944</kml:latitude>
+          <kml:altitude>9.223000000133652E-4</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1244783</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>27586/DEBW522AA00024ac9.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_DEBW522AA00008394">
+      <kml:name>DEBW522AA00008394</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1754539</kml:longitude>
+          <kml:latitude>48.7787912</kml:latitude>
+          <kml:altitude>5.659999999352294E-5</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1406208</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>26780/DEBW522AA00008394.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_DEBW522AA00025df1">
+      <kml:name>DEBW522AA00025df1</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.174957</kml:longitude>
+          <kml:latitude>48.7792246</kml:latitude>
+          <kml:altitude>3.839999999399879E-5</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1375884</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>5050/DEBW522AA00025df1.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>

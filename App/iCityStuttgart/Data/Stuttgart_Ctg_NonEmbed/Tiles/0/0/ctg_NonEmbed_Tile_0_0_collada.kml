@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Written by 3D City Database Importer/Exporter, version "3.3.1-build1" -->
+<!-- Chair of Geoinformatics, Technical University of Munich, Germany, https://www.gis.bgu.tum.de/ -->
+<kml xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <name>ctg_NonEmbed_Tile_0_0_collada</name>
+    <open>false</open>
+    <Placemark id="COLLADA_DEBW522AA00013c7d">
+      <name>DEBW522AA00013c7d</name>
+      <Model>
+        <altitudeMode>clampToGround</altitudeMode>
+        <Location>
+          <longitude>9.171469</longitude>
+          <latitude>48.7757617</latitude>
+          <altitude>3.4999999911633495E-6</altitude>
+        </Location>
+        <Orientation>
+          <heading>0.136277</heading>
+        </Orientation>
+        <Link>
+          <href>18060/DEBW522AA00013c7d.dae</href>
+        </Link>
+      </Model>
+    </Placemark>
+    <Placemark id="COLLADA_DEBW522AA00008941">
+      <name>DEBW522AA00008941</name>
+      <Model>
+        <altitudeMode>clampToGround</altitudeMode>
+        <Location>
+          <longitude>9.1716459</longitude>
+          <latitude>48.7755118</latitude>
+          <altitude>6.973000000130014E-4</altitude>
+        </Location>
+        <Orientation>
+          <heading>0.1220138</heading>
+        </Orientation>
+        <Link>
+          <href>21458/DEBW522AA00008941.dae</href>
+        </Link>
+      </Model>
+    </Placemark>
+    <Placemark id="COLLADA_DEBW522AA000243d5">
+      <name>DEBW522AA000243d5</name>
+      <Model>
+        <altitudeMode>clampToGround</altitudeMode>
+        <Location>
+          <longitude>9.1711563</longitude>
+          <latitude>48.7756214</latitude>
+          <altitude>4.900000021734741E-6</altitude>
+        </Location>
+        <Orientation>
+          <heading>0.1293777</heading>
+        </Orientation>
+        <Link>
+          <href>27402/DEBW522AA000243d5.dae</href>
+        </Link>
+      </Model>
+    </Placemark>
+    <Placemark id="COLLADA_DEBW522AA00044ced">
+      <name>DEBW522AA00044ced</name>
+      <Model>
+        <altitudeMode>clampToGround</altitudeMode>
+        <Location>
+          <longitude>9.1699106</longitude>
+          <latitude>48.7758804</latitude>
+          <altitude>2.949999998236308E-5</altitude>
+        </Location>
+        <Orientation>
+          <heading>0.1305645</heading>
+        </Orientation>
+        <Link>
+          <href>18282/DEBW522AA00044ced.dae</href>
+        </Link>
+      </Model>
+    </Placemark>
+  </Document>
+</kml>

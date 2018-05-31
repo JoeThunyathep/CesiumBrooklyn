@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>Export3DcityDB_CtgOff10_Tile_15_12_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark id="COLLADA_DEBW522AA00025a0e">
+      <kml:name>DEBW522AA00025a0e</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1776889</kml:longitude>
+          <kml:latitude>48.7823567</kml:latitude>
+          <kml:altitude>303.2884159</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1247971</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>14535/DEBW522AA00025a0e.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>

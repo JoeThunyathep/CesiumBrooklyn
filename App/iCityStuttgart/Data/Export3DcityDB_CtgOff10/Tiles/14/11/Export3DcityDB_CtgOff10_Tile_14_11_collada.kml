@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>Export3DcityDB_CtgOff10_Tile_14_11_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark id="COLLADA_DEBW522AA00004154">
+      <kml:name>DEBW522AA00004154</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1759011</kml:longitude>
+          <kml:latitude>48.7819673</kml:latitude>
+          <kml:altitude>305.0496511</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1368496</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>14927/DEBW522AA00004154.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_DEBW522AA0004489e">
+      <kml:name>DEBW522AA0004489e</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1759321</kml:longitude>
+          <kml:latitude>48.7817791</kml:latitude>
+          <kml:altitude>304.8700084</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1275227</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>13634/DEBW522AA0004489e.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_DEBW522AA0001f111">
+      <kml:name>DEBW522AA0001f111</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>9.1754712</kml:longitude>
+          <kml:latitude>48.7821491</kml:latitude>
+          <kml:altitude>309.4494379</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>0.1353507</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>27552/DEBW522AA0001f111.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>

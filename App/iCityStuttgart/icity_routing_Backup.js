@@ -1,0 +1,638 @@
+//////////////////////////////////
+// Test to add Geojson Request////
+//////////////////////////////////
+var routeEntities;
+var routeService = function () {
+    showpo = true;
+    // entity.label.show = true;
+    var geojsonOptions = {
+        stroke: Cesium.Color.RED,
+        fill: Cesium.Color.PINK.withAlpha(0.5),
+        strokeWidth: 3,
+        clampToGround: true
+    };
+
+
+    var routePromise = Cesium.GeoJsonDataSource.load(geotesta["routes"][0]["geometry"], geojsonOptions);
+    //var neighborhoods;
+    routePromise.then(function (dataSource) {
+        // Add the new data as entities to the viewer
+        viewer.dataSources.add(dataSource);
+        routeEntities = dataSource.entities.values[0];
+        routeEntities.name = "Route";
+        routeEntities.description = 
+            "Distance : " + geotesta["routes"][0]["summary"]["distance"] + "m<br>"+
+            "Duration : " + geotesta["routes"][0]["summary"]["duration"] + "sec<br>"+
+            "Ascent : " + geotesta["routes"][0]["summary"]["ascent"] + "m<br>"+
+            "Descent: " + geotesta["routes"][0]["summary"]["descent"] + "m<br>"
+        ;
+        routeEntities.label = {
+            text: "Route",
+            showBackground: true,
+            scale: 0.6,
+            font : '14px monospace',
+            horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
+            verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+            //distanceDisplayCondition : new Cesium.DistanceDisplayCondition(10.0, 8000.0),
+            disableDepthTestDistance: Number.POSITIVE_INFINITY,
+            backgroundPadding: new Cesium.Cartesian2(20, 8),
+            pixelOffset: new Cesium.Cartesian2(50, -50),
+            backgroundColor: new Cesium.Color(0.0, 0, 0.0, 0.3)
+        };
+    });
+    
+};
+var showpo = false;
+var HideRoute = function () {
+    routeEntities.show = false;
+    showpo = false;
+}
+
+var geotesta = {
+    "routes": [
+        {
+            "elevation": true,
+            "summary": {
+                "distance": 1149.9,
+                "duration": 233.1,
+                "ascent": 7.5,
+                "descent": 1
+            },
+            "geometry_format": "geojson",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        9.181419,
+                        48.783613,
+                        250
+                    ],
+                    [
+                        9.181395,
+                        48.783585,
+                        250
+                    ],
+                    [
+                        9.181364,
+                        48.78355,
+                        250
+                    ],
+                    [
+                        9.181292,
+                        48.783446,
+                        250
+                    ],
+                    [
+                        9.181254,
+                        48.783461,
+                        250
+                    ],
+                    [
+                        9.1812,
+                        48.783482,
+                        250
+                    ],
+                    [
+                        9.181109,
+                        48.783383,
+                        250
+                    ],
+                    [
+                        9.180705,
+                        48.783535,
+                        250
+                    ],
+                    [
+                        9.18062,
+                        48.783534,
+                        250
+                    ],
+                    [
+                        9.180485,
+                        48.78348,
+                        250
+                    ],
+                    [
+                        9.180377,
+                        48.783544,
+                        250
+                    ],
+                    [
+                        9.180276,
+                        48.783439,
+                        250
+                    ],
+                    [
+                        9.180232,
+                        48.783394,
+                        250
+                    ],
+                    [
+                        9.18016,
+                        48.783392,
+                        250
+                    ],
+                    [
+                        9.180175,
+                        48.783296,
+                        250
+                    ],
+                    [
+                        9.180125,
+                        48.78324,
+                        250
+                    ],
+                    [
+                        9.17994,
+                        48.783041,
+                        250
+                    ],
+                    [
+                        9.179783,
+                        48.78287,
+                        250
+                    ],
+                    [
+                        9.179505,
+                        48.782567,
+                        250
+                    ],
+                    [
+                        9.179394,
+                        48.782436,
+                        250.1
+                    ],
+                    [
+                        9.17935,
+                        48.782386,
+                        250.1
+                    ],
+                    [
+                        9.179296,
+                        48.782327,
+                        250.2
+                    ],
+                    [
+                        9.179106,
+                        48.782395,
+                        250.2
+                    ],
+                    [
+                        9.178295,
+                        48.782718,
+                        250.5
+                    ],
+                    [
+                        9.177814,
+                        48.782916,
+                        250.7
+                    ],
+                    [
+                        9.177744,
+                        48.782946,
+                        250.8
+                    ],
+                    [
+                        9.177645,
+                        48.782988,
+                        250.8
+                    ],
+                    [
+                        9.177534,
+                        48.783029,
+                        250.9
+                    ],
+                    [
+                        9.177486,
+                        48.783046,
+                        251.1
+                    ],
+                    [
+                        9.177357,
+                        48.783094,
+                        251.4
+                    ],
+                    [
+                        9.177305,
+                        48.783115,
+                        251.6
+                    ],
+                    [
+                        9.177275,
+                        48.783025,
+                        251.8
+                    ],
+                    [
+                        9.177259,
+                        48.782979,
+                        252
+                    ],
+                    [
+                        9.177117,
+                        48.782731,
+                        252.4
+                    ],
+                    [
+                        9.177013,
+                        48.782597,
+                        252.6
+                    ],
+                    [
+                        9.177002,
+                        48.782581,
+                        252.8
+                    ],
+                    [
+                        9.176981,
+                        48.78255,
+                        253
+                    ],
+                    [
+                        9.176976,
+                        48.782514,
+                        253.2
+                    ],
+                    [
+                        9.176963,
+                        48.782353,
+                        253.3
+                    ],
+                    [
+                        9.176913,
+                        48.781826,
+                        253.5
+                    ],
+                    [
+                        9.176902,
+                        48.781719,
+                        253.6
+                    ],
+                    [
+                        9.176871,
+                        48.781446,
+                        253.5
+                    ],
+                    [
+                        9.176896,
+                        48.781308,
+                        253.4
+                    ],
+                    [
+                        9.176792,
+                        48.781271,
+                        253.2
+                    ],
+                    [
+                        9.176669,
+                        48.78126,
+                        253.1
+                    ],
+                    [
+                        9.176232,
+                        48.781121,
+                        252.7
+                    ],
+                    [
+                        9.176158,
+                        48.781096,
+                        252.6
+                    ],
+                    [
+                        9.175406,
+                        48.780848,
+                        252.8
+                    ],
+                    [
+                        9.175044,
+                        48.780728,
+                        253.2
+                    ],
+                    [
+                        9.174994,
+                        48.78071,
+                        253.3
+                    ],
+                    [
+                        9.174548,
+                        48.78057,
+                        253.8
+                    ],
+                    [
+                        9.173629,
+                        48.780273,
+                        254.5
+                    ],
+                    [
+                        9.173545,
+                        48.780246,
+                        254.6
+                    ],
+                    [
+                        9.172947,
+                        48.780049,
+                        254.6
+                    ],
+                    [
+                        9.172772,
+                        48.779991,
+                        254.9
+                    ],
+                    [
+                        9.172125,
+                        48.779779,
+                        255.6
+                    ],
+                    [
+                        9.172069,
+                        48.779825,
+                        255.7
+                    ],
+                    [
+                        9.171681,
+                        48.780342,
+                        256.2
+                    ],
+                    [
+                        9.171892,
+                        48.780464,
+                        256.4
+                    ],
+                    [
+                        9.172233,
+                        48.780577,
+                        256.6
+                    ]
+                ]
+            },
+            "segments": [
+                {
+                    "distance": 1149.9,
+                    "duration": 233.1,
+                    "ascent": 7.5,
+                    "descent": 1,
+                    "steps": [
+                        {
+                            "distance": 20.7,
+                            "duration": 16.7,
+                            "type": 11,
+                            "instruction": "Head southwest on <b>Mittelausgang<\/b>",
+                            "name": "Mittelausgang",
+                            "way_points": [
+                                0,
+                                3
+                            ]
+                        },
+                        {
+                            "distance": 7.9,
+                            "duration": 4.7,
+                            "type": 1,
+                            "instruction": "Turn right",
+                            "name": "",
+                            "way_points": [
+                                3,
+                                5
+                            ]
+                        },
+                        {
+                            "distance": 12.8,
+                            "duration": 7.7,
+                            "type": 0,
+                            "instruction": "Turn left",
+                            "name": "",
+                            "way_points": [
+                                5,
+                                6
+                            ]
+                        },
+                        {
+                            "distance": 40.4,
+                            "duration": 9.1,
+                            "type": 1,
+                            "instruction": "Turn right",
+                            "name": "",
+                            "way_points": [
+                                6,
+                                8
+                            ]
+                        },
+                        {
+                            "distance": 11.6,
+                            "duration": 2.6,
+                            "type": 4,
+                            "instruction": "Turn slight left onto <b>Hauptbahnhof<\/b>",
+                            "name": "Hauptbahnhof",
+                            "way_points": [
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "distance": 10.6,
+                            "duration": 1.7,
+                            "type": 1,
+                            "instruction": "Turn right onto <b>Arnulf-Klett-Platz<\/b>",
+                            "name": "Arnulf-Klett-Platz",
+                            "way_points": [
+                                9,
+                                10
+                            ]
+                        },
+                        {
+                            "distance": 19.8,
+                            "duration": 3.2,
+                            "type": 0,
+                            "instruction": "Turn left",
+                            "name": "",
+                            "way_points": [
+                                10,
+                                12
+                            ]
+                        },
+                        {
+                            "distance": 5.2,
+                            "duration": 0.9,
+                            "type": 1,
+                            "instruction": "Turn right",
+                            "name": "",
+                            "way_points": [
+                                12,
+                                13
+                            ]
+                        },
+                        {
+                            "distance": 10.8,
+                            "duration": 1.8,
+                            "type": 0,
+                            "instruction": "Turn left onto <b>Lautenschlagerstraße<\/b>",
+                            "name": "Lautenschlagerstraße",
+                            "way_points": [
+                                13,
+                                14
+                            ]
+                        },
+                        {
+                            "distance": 125.5,
+                            "duration": 20.5,
+                            "type": 5,
+                            "instruction": "Turn slight right onto <b>Lautenschlagerstraße<\/b>",
+                            "name": "Lautenschlagerstraße",
+                            "way_points": [
+                                14,
+                                21
+                            ]
+                        },
+                        {
+                            "distance": 141.6,
+                            "duration": 23.2,
+                            "type": 1,
+                            "instruction": "Turn right onto <b>Kronenstraße<\/b>",
+                            "name": "Kronenstraße",
+                            "way_points": [
+                                21,
+                                26
+                            ]
+                        },
+                        {
+                            "distance": 13.3,
+                            "duration": 2.2,
+                            "type": 6,
+                            "instruction": "Continue straight onto<b>Friedrichsplatz<\/b>",
+                            "name": "Friedrichsplatz",
+                            "way_points": [
+                                26,
+                                28
+                            ]
+                        },
+                        {
+                            "distance": 15.3,
+                            "duration": 2.5,
+                            "type": 6,
+                            "instruction": "Continue straight onto <b>Kronenstraße<\/b>",
+                            "name": "Kronenstraße",
+                            "way_points": [
+                                28,
+                                30
+                            ]
+                        },
+                        {
+                            "distance": 205.9,
+                            "duration": 32.6,
+                            "type": 2,
+                            "instruction": "Turn sharpleft",
+                            "name": "",
+                            "way_points": [
+                                30,
+                                42
+                            ]
+                        },
+                        {
+                            "distance": 121,
+                            "duration": 19.8,
+                            "type": 1,
+                            "instruction": "Turn right onto <b>Schellingstraße<\/b>",
+                            "name": "Schellingstraße",
+                            "way_points": [
+                                42,
+                                47
+                            ]
+                        },
+                        {
+                            "distance": 268.2,
+                            "duration": 43.2,
+                            "type": 6,
+                            "instruction": "Continue straight onto <b>Schellingstraße<\/b>",
+                            "name": "Schellingstraße",
+                            "way_points": [
+                                47,
+                                55
+                            ]
+                        },
+                        {
+                            "distance": 70.7,
+                            "duration": 11.6,
+                            "type": 1,
+                            "instruction": "Turn right onto <b>Kienestraße<\/b>",
+                            "name": "Kienestraße",
+                            "way_points": [
+                                55,
+                                57
+                            ]
+                        },
+                        {
+                            "distance": 48.6,
+                            "duration": 29.1,
+                            "type": 1,
+                            "instruction": "Turn right",
+                            "name": "",
+                            "way_points": [
+                                57,
+                                59
+                            ]
+                        },
+                        {
+                            "distance": 0,
+                            "duration": 0,
+                            "type": 10,
+                            "instruction": "Arrive at your destination, on the right",
+                            "name": "",
+                            "way_points": [
+                                59,
+                                59
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "way_points": [
+                0,
+                59
+            ],
+            "bbox": [
+                9.171681,
+                48.779779,
+                9.181419,
+                48.783613
+            ]
+        }
+    ],
+    "bbox": [
+        9.171681,
+        48.779779,
+        9.181419,
+        48.783613
+    ],
+    "info": {
+        "attribution": "openrouteservice.org | OpenStreetMap contributors",
+        "osm_file_md5_hash": "8636442c46fd651caebe60c4752a0f30",
+        "engine": {
+            "version": "4.4.0",
+            "build_date": "2018-01-19T14: 13: 34Z"
+        },
+        "service": "routing",
+        "timestamp": 1517332272162,
+        "query": {
+            "profile": "cycling-electric",
+            "preference": "fastest",
+            "coordinates": [
+                [
+                    9.181392,
+                    48.783623,
+                    0
+                ],
+                [
+                    9.172445,
+                    48.780299,
+                    0
+                ]
+            ],
+            "language": "en",
+            "units": "m",
+            "geometry": true,
+            "geometry_format": "geojson",
+            "geometry_simplify": false,
+            "instructions_format": "html",
+            "instructions": true,
+            "elevation": true
+        }
+    }
+}
