@@ -124,7 +124,9 @@ html, body, #cesiumContainer {
     font-family: "Arial";
     z-index: 99999;
 }
-
+#redHook {
+	cursor: pointer;
+}
 
 .myButtonOff {
 	-moz-box-shadow: 3px 4px 0px 0px #8a2a21;

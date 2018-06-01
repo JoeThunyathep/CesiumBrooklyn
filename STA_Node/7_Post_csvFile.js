@@ -14,7 +14,7 @@ const SENSOR_API_FINAL_URL = '/Observations';
 // Require
 var parse = require('csv-parse');
 //-----------------------------------------Set up-----------------------------------------
-var inputCSV = './Data/CSV_Data/xxx.csv'; // Put CSV file path here
+var inputCSV = './Data/CSV_Data/data_heat1.csv'; // Put CSV file path here
 var DataStreamID, outTemp;
 //* variable for STA service
 var st_id;                  //IoT id of the Sensors and Things
@@ -22,7 +22,7 @@ var dataStr_id;             //IoT id of the observed properties
 var execute = true;         //Default at false to show the result in terminal first (not POST yet)
 //var execute1 = false;       //Column 2-4
 var startLine = 1;  //first line
-var maxLineTCX = 1000;    //all = out.length
+var maxLineTCX = 12;    //all = out.length
 
 //* Function "generateRequestfromJSON" make a POST request to the STA
 //* Depended on the incoming log file
@@ -36,42 +36,27 @@ function generateRequestCSV(num) {
             for (let i = startLine; i <= maxLineTCX /* out.length-1 or maxLineTCX*/; i++) {
                 setTimeout(function cb() {
                     // TCX (More detailed and more rows than GPX)
-                    var dataStreamAussentemp = {
+                    var dataStreamMeasured  = {
                         "phenomenonTime": out[i][0],
                         "resultTime": out[i][0],
                         "result": out[i][1],
                         "Datastream": { "@iot.id": 1 }
                     }
-                    var dataStreamAulaTableau = {
+                    var dataStreamComputed = {
                         "phenomenonTime": out[i][0],
                         "resultTime": out[i][0],
                         "result": out[i][2],
                         "Datastream": { "@iot.id": 2 }
                     }
-                    var dataStreamAulaRTunten = {
-                        "phenomenonTime": out[i][0],
-                        "resultTime": out[i][0],
-                        "result": out[i][3],
-                        "Datastream": { "@iot.id": 3 }
-                    }
-                    var dataStreamAulaRToben = {
-                        "phenomenonTime": out[i][0],
-                        "resultTime": out[i][0],
-                        "result": out[i][4],
-                        "Datastream": { "@iot.id": 4 }
-                    }
                     if (execute) {
                         // Uncomment to Execute
-                        //postSTA(dataStreamAussentemp, i,'AussenTemp');   //DS:1
-                        //postSTA(dataStreamAulaTableau, i,'AulaTableau'); //DS:2
+                        postSTA(dataStreamMeasured, i,'Measured');   //DS:1
+                        postSTA(dataStreamComputed, i,'Computed'); //DS:2
                         //postSTA(dataStreamAulaRTunten, i,'AulaRTunten'); //DS:3
                         //postSTA(dataStreamAulaRToben, i,'AulaRToben');   //DS:4
                     } else {
-                        //console.log(`dataStreamAussentemp [${i}] :` + JSON.stringify(dataStreamAussentemp));
-                        //console.log(`dataStreamAulaTableau [${i}] :` + JSON.stringify(dataStreamAulaTableau));
-                        //console.log(`dataStreamAulaRTunten [${i}] :` + JSON.stringify(dataStreamAulaRTunten));
-                        //console.log(`dataStreamAulaRToben [${i}] :` + JSON.stringify(dataStreamAulaRToben));
-                        //console.log('---------------------------------------------------lenght:')
+                        console.log(`dataStreamMeasured [${i}] :` + JSON.stringify(dataStreamMeasured));
+                        console.log(`dataStreamComputed [${i}] :` + JSON.stringify(dataStreamComputed));
                     }
                 }, 50 * (i - 0));
             }

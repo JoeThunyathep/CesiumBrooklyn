@@ -7,7 +7,7 @@
     //URL Path    
     const SENSOR_API_FINAL_URL = '/FeaturesOfInterest';
     //File Path
-    var file = 'Data/STA_initialData_HFT_Sensor/FOI.json'; //Local input file
+    var file = './Data/STA_JSON/FOI.json'; //Local input file
     var object;
     // ===================================================================
     function Post_Sensor() {

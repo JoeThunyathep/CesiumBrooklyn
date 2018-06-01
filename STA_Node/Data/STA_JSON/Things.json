@@ -1,7 +1,7 @@
 [
 {
-    "name": "RedHookAreaB",
-    "description": "AreaB",
+    "name": "Thing_Redhook",
+    "description": "Thing_Redhook",
     "properties": {
         "Address": "Brooklyn"
     }

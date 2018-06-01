@@ -73,7 +73,7 @@ var drawChart = function (ebikeID, DS_1, DS_2, dataTag1, dataTag2, unit1, unit2)
             data: DS_1
         }, {
             name: nameTag + dataTag2,
-            yAxis: 1,
+            //yAxis: 1,
             // Define the data points. All series have a dummy year
             // of 1970/71 in order to be compared on the same x axis. Note
             // that in JavaScript, months start at 0 for January, 1 for February etc.

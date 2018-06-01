@@ -7,9 +7,9 @@ const SENSOR_API_BASE_URL = 'http://localhost:8080/STA_Brooklyn/v1.0';
 //URL Path    
 const SENSOR_API_FINAL_URL = '/Things';
 //File Path
-var file = 'Data/STA_initialData_HFT_Sensor/Location_HFT.json'; //Local input file
-var i = 2; //start Thing ID
-var j = 4; //stop Thing ID
+var file = './Data/STA_JSON/Location.json'; //Local input file
+var i = 1; //start Thing ID
+var j = 1; //stop Thing ID
 // ===================================================================
 function Post_Location() {
     jsonfile.readFile(file, function (err, obj) {

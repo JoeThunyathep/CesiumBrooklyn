@@ -1,12 +1,17 @@
 //////////////////////////////////////////////////////////
 //////////// Date Selector management ////////////////////
 //////////////////////////////////////////////////////////
-var TimeFromSelected, TimeToSelected, dateSelected, MinuteFromSelected, MinuteToSelected;
+var monthSelectFrom, monthSelectTo;
 $(document).ready(function () {
     //var Defdate = new Date('2017-11-22');
+
     $("#showChart").click(function () {
-        //Give the Default Date
-        drawC("2016-01-01T00:00:00.000Z", "2016-02-01T00:00:00.000Z");
+        //Give the Default Date    
+    monthSelectFrom = MonthValueFrom.options[MonthValueFrom.selectedIndex].value;
+    monthSelectTo = MonthValueTo.options[MonthValueTo.selectedIndex].value;
+    var strFrom = "2016-" + monthSelectFrom+    "-01T00:00:00.000Z";
+    var strTo = "2016-" + monthSelectTo+      "-01T00:00:00.000Z";
+        drawC(strFrom, strTo);
         
     });
     $("#showValue").click(function () {
@@ -18,8 +23,8 @@ var drawC = function (FromStr, ToStr,) {
     //var selectedFirstPara = FirstParameter.options[FirstParameter.selectedIndex].value;
     //var selectedSecondPara = SecondParameter.options[SecondParameter.selectedIndex].value;
     
-    var DStag1 = 1;
-    var DStag2 = 2;
+    var DStag1 = "Heat_Demand_Measured";
+    var DStag2 = "Heat_Demand_Computed";
     DS_First = GenSerieDataN(FromStr,ToStr, 1);
     var DS_Second = GenSerieDataN(FromStr,ToStr, 2);
     var unit1 = "";

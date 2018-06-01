@@ -11,7 +11,7 @@ Object.size = function(obj) {
     return size;
 };
 //get Fuel Level Chart for 22/11/2017
-var Base = "http://localhost:8080/STA_Test_Rossani/v1.0/Datastreams(";
+var Base = "http://localhost:8080/STA_Brooklyn/v1.0/Datastreams(";
 
 //http://localhost:8080/SensorThingsService/v1.0/Datastreams(4)/Observations?$orderby=resultTime&$filter=resultTime%20ge%202017-11-22T09:00:00.000Z%20and%20resultTime%20le%202017-11-24T09:03:58.000Z
 

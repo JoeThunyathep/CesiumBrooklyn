@@ -1,7 +1,7 @@
 [
   {
-    "name": "RedHookAreaB",
-    "description": "RedHookAreaB",
+    "name": "Sensor_RedHook",
+    "description": "Sensor_RedHook",
     "encodingType": "application/pdf",
     "metadata": "https://en.wikipedia.org/wiki/Brooklyn"
   }

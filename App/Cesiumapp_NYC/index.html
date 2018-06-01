@@ -36,21 +36,10 @@
             <span style="color:azure">NYC Summer School/</span>
             <span style="color:crimson"> Joe</span>
         </h1>
-        <!-- ///////////////////////////////////////////////////////////////////////////////////
-        //////////////////////////////Session for 3D Map Pin Menu//////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////////////// -->
-        <h3 onclick="openMapP()" style="cursor:pointer; color:rgb(138, 154, 226)">Select the Area</h3>
-        <div id="MapP" style="display:none">
-            <strong>Red Hook</strong>
-            <br>
-            <button class="myButtonBlue" type="button" onclick="ShowMapPinPublic()">Show</button>
-            <button class="myButtonRed" type="button" onclick="HideMapPinPublic()">Hide</button>
-            <br>
-        </div>
         <!-- //////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////Session for 3D City Model Menu//////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////// -->
-        <h3 onclick="open3DCMO()" style="cursor:pointer">3D City Model</h3>
+        <h3 onclick="open3DCMO()" style="cursor:pointer">Layer Menu</h3>
         <div id="DCMO" style="display:none">
             <strong>CensusLayer</strong>
             <button class="myButtonGreen" type="button" onclick="addCensus()">On</button>
@@ -70,17 +59,69 @@
                 </select>
             </div>
         </div>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////Session for 3D Map Pin Menu//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////// -->
+        <h3 onclick="openMapP()" style="cursor:pointer; color:rgb(138, 154, 226)">Select the Area</h3>
+        <div id="MapP" style="display:none">
+            <span onclick="ShowMapPinPublic()" id= "redHook"><strong>Red Hook</strong></span>
+            <br>
+            <strong>Columbia St</strong><br>
+            <strong>Cobble Hill</strong><br>
+            <strong>Carroll Gardens</strong><br>
+            <strong>Brooklyn Heights</strong><br>
+            <strong>Downtown Brooklyn</strong><br>
+            
+            
+            <!-- <button class="myButtonBlue" type="button" onclick="ShowMapPinPublic()">Show</button>
+            <button class="myButtonRed" type="button" onclick="HideMapPinPublic()">Hide</button>
+            <br> -->
+        </div>
+        
         <!-- //////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////Session for Calling Graph ///////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////// -->
         <h3 onclick="openStat()" style="cursor:pointer; color:rgb(228, 139, 139)">Historical Statistic Data</h3>
         <div id="CamMe" style="display:none">
+            <div class="nowrap" id="MonthSelectFrom">
+                <select id="MonthValueFrom">
+                    <option value="01"> Jan 2013 </option>
+                    <option value="02"> Feb 2013 </option>
+                    <option value="03"> Mar 2013 </option>
+                    <option value="04"> Apr 2013 </option>
+                    <option value="05"> May 2013 </option>
+                    <option value="06"> Jun 2013 </option>
+                    <option value="07"> Jul 2013 </option>
+                    <option value="08"> Aug 2013 </option>
+                    <option value="09"> Sep 2013 </option>
+                    <option value="10"> Oct 2013 </option>
+                    <option value="11"> Nov 2013 </option>
+                    <option value="12"> Dec 2013 </option>
+                </select>
+            </div>
+            <div class="nowrap" id="MonthSelectTo">
+                <select id="MonthValueTo">
+                    <option value="01"> Jan 2013 </option>
+                    <option value="02"> Feb 2013 </option>
+                    <option value="03"> Mar 2013 </option>
+                    <option value="04"> Apr 2013 </option>
+                    <option value="05"> May 2013 </option>
+                    <option value="06"> Jun 2013 </option>
+                    <option value="07"> Jul 2013 </option>
+                    <option value="08"> Aug 2013 </option>
+                    <option value="09"> Sep 2013 </option>
+                    <option value="10"> Oct 2013 </option>
+                    <option value="11"> Nov 2013 </option>
+                    <option value="12"> Dec 2013 </option>
+                </select>
+            </div>
+
+            <button class="myButtonBlue" id="showChart">Show Chart</button>
+            <button class="myButtonRed" type="button" onclick="RemoveStat()">Close</button>
+            <br>
+            <button class="myButtonBlue" id="showValue">Show Statistic Values</button>
+            <button class="myButtonRed" type="button" onclick="RemoveStatValue()">Close</button>
         </div>
-        <button class="myButtonBlue" id="showChart">Show Chart</button>
-        <button class="myButtonRed" type="button" onclick="RemoveStat()">Close</button>
-        <br>
-        <button class="myButtonBlue" id="showValue">Show Statistic Values</button>
-        <button class="myButtonRed" type="button" onclick="RemoveStatValue()">Close</button>
     </div>
 
 
