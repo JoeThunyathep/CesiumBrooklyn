@@ -209,9 +209,9 @@ neighborhoodsPromise.then(function(dataSource) {
             entity.name = entity.properties.neighborhood;
             // Set the polygon material to a random, translucent color
             entity.polygon.material = Cesium.Color.fromRandom({
-                red : 0.1,
-                maximumGreen : 0.5,
-                minimumBlue : 0.5,
+                maximumRed : 1,
+                maximumGreen : 1,
+                minimumBlue : 0,
                 alpha : 0.6
             });
             // Tells the polygon to color the terrain. ClassificationType.CESIUM_3D_TILE will color the 3D tileset, and ClassificationType.BOTH will color both the 3d tiles and terrain (BOTH is the default)

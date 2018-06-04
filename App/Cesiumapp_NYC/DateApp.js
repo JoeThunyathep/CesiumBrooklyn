@@ -31,7 +31,7 @@ var drawC = function (FromStr, ToStr,) {
     var unit2 = "";
     setTimeout(function cb() {
         drawChart('1', DS_First[0], DS_Second[0], DStag1, DStag2, unit1, unit2);
-        //drawStat(DS_First[1], DS_Second[1], unit1, unit2);
+        drawStat(DS_First[1], DS_Second[1], unit1, unit2);
         HightChartContainer.style.display = "block";
         document.getElementById('sd1nametag').innerHTML = DStag1;
         document.getElementById('sd2nametag').innerHTML = DStag2;
